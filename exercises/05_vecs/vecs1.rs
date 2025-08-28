@@ -4,12 +4,18 @@ fn array_and_vec() -> ([i32; 4], Vec<i32>) {
     // TODO: Create a vector called `v` which contains the exact same elements as in the array `a`.
     // Use the vector macro.
     // let v = ???;
+    let v = a.to_vec();
 
     (a, v)
 }
 
 fn main() {
-    // You can optionally experiment here.
+    let (arr, vect) = array_and_vec();
+    println!("{:?}", arr);
+    println!("{:?}", vect);
+
+    println!("length of array: {}", arr.len());
+    println!("length of vect: {}", vect.len());
 }
 
 #[cfg(test)]
